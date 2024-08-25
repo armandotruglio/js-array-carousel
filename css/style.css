@@ -6,3 +6,68 @@
     box-sizing: border-box;
     font-family:  sans-serif;
 }
+
+/* Generics */
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Container */
+
+.container{
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+/* Gallery */
+
+.gallery{
+    flex-basis: 80%;
+    height: 100%;
+}
+
+.gallery img{
+    display: none;
+}
+
+.gallery img.active{
+    display: block;
+}
+
+
+/* Thumbnail */
+
+.thumbnail{
+    height: 100%;
+    flex-basis: 30%;
+    position: relative;
+}
+
+.thumbnail .thumb{
+    height: 100px;
+}
+
+.thumbnail i{
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    right: 50%;
+}
+
+.thumbnail .fa-circle-arrow-down{
+    top: 95%;
+}
+
+.thumb img{
+    filter: grayscale(1);
+}
+
+.thumb img.active{
+    filter: grayscale(0);
+}
