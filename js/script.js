@@ -35,3 +35,35 @@ let currentActiveIndex = 0;
 
 gallery[currentActiveIndex].classList.add('active');
 thumbnail[currentActiveIndex].classList.add('active');
+
+//Rendo dinamico lo slider
+
+prevButton.addEventListener('click', function(){
+    gallery[currentActiveIndex].classList.remove('active');
+    thumbnail[currentActiveIndex].classList.remove('active');
+
+    if(currentActiveIndex === 0){
+        currentActiveIndex = gallery.length - 1;
+    }
+    else{
+        currentActiveIndex--;
+    }
+
+    thumbnail[currentActiveIndex].classList.add('active');
+    gallery[currentActiveIndex].classList.add('active');
+})
+
+nextButton.addEventListener('click', function(){
+    gallery[currentActiveIndex].classList.remove('active');
+    thumbnail[currentActiveIndex].classList.remove('active');
+
+    if(currentActiveIndex === 4){
+        currentActiveIndex = 0;
+    }
+    else{
+        currentActiveIndex++;
+    }
+
+    thumbnail[currentActiveIndex].classList.add('active');
+    gallery[currentActiveIndex].classList.add('active');
+})

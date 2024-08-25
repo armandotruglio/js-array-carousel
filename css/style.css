@@ -33,6 +33,7 @@ img{
 
 #gallery img{
     display: none;
+    height: 100%;
 }
 
 #gallery img.active{
@@ -77,4 +78,5 @@ img{
 
 #thumbnail img.active{
     filter: grayscale(0);
+    border: 4px solid red;
 }
